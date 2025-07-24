@@ -1,0 +1,26 @@
+{
+  "name": "tabspace",
+  "version": "1.0.0",
+  "main": "popup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattMRadford/TabSpace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattMRadford/TabSpace/issues"
+  },
+  "homepage": "https://github.com/MattMRadford/TabSpace#readme",
+  "description": "",
+  "dependencies": {
+    "compromise": "^14.14.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.6"
+  }
+}

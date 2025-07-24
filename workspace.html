@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TabSpace Workspace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>TabSpace</h1>
+
+  <!-- Control Buttons -->
+  
+  <div id="controls">
+  <div id="grouping">
+    <select id="groupMode">
+      <option value="content">🧠 Group by Content</option>
+      <option value="type">🧮 Group by Page Type</option>
+    </select>
+    <button id="groupBtn">📂 Group Tabs with AI</button>
+    <button id="cleanupBtn">🧹 Close Old Tabs</button>
+    <div id="loadingSpinner" style="display: none;">
+      <img src="spinner.gif" alt="Loading..." width="20" height="20">
+    </div>
+
+    <button id="refreshBtn">🔄 Refresh Tab Layout</button>
+  </div>
+
+  <!-- Add this after your controls div -->
+  <div id="analyticsPanel" style="display: none;">
+    <h3>📊 Your TabSpace Stats</h3>
+    <div id="analyticsContent"></div>
+    <button id="closeAnalytics">Close</button>
+  </div>
+
+<!-- Add analytics button to controls -->
+<button id="analyticsBtn">📊 Stats</button>
+
+  <div id="sessionTools">
+    <button id="saveBtn">💾 Save Session</button>
+    <button id="restoreBtn">♻️ Restore Session</button>
+  </div>
+</div>
+  
+  <!-- Search Bar (Optional for filtering tabs) -->
+  <input type="text" id="tabSearch" placeholder="Search tabs..." />
+
+  <!-- Rendered Tab Groups -->
+  <div id="tabList"></div>
+
+  <script src="dist/bundle.js"></script>
+</body>
+</html>

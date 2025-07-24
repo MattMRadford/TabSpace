@@ -1,0 +1,318 @@
+body {
+  background-color: #121212;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  padding: 20px;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+button {
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2d2d2d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+#grouping,
+#sessionTools {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#tabSearch {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#groupMode {
+  padding: 6px;
+  border-radius: 6px;
+  background: #202020;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+
+
+
+
+.tab-card:hover {
+  transform: scale(1.02);
+}
+
+.ai-glow {
+  border: 2px solid #ffa500;
+  box-shadow: 0 0 8px #ffa500;
+  animation: glowPulse 1.5s infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 0px #ffa500; }
+  50% { box-shadow: 0 0 12px #ffa500; }
+}
+
+
+/* Group Card Container */
+.group-card {
+  background-color: #1f1f1f;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  transition: max-height 0.3s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  max-height: 320px;
+}
+
+/* Optional hover effect */
+.group-card:hover {
+  transform: scale(1.01);
+}
+
+
+
+/* Collapse Button */
+.collapse-btn {
+  padding: 4px 8px;
+  background-color: #2d2d2d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Container that holds tab cards inside each group */
+.tab-container {
+  overflow-y: auto;
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 4px;
+  scrollbar-gutter: stable;
+
+}
+
+/* Tab Card */
+.tab-card {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  border-radius: 6px;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  justify-content: space-between;
+  gap: 10px;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+
+
+
+}
+
+/* Favicon */
+.tab-card img {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+}
+
+/* Tab Title */
+.tab-card .title {
+  flex-grow: 1;
+  color: #fff;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+
+}
+
+/* "Go to Tab" Button */
+.tab-card .open-btn {
+  background-color: #007acc;
+  color: white;     
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+
+}
+
+
+
+/* Optional Search Bar */
+#searchInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  background-color: #2d2d2d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Group container for draggable layout */
+.group-card {
+  background-color: var(--tabspace-bg, #1e1e1e);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%; /* allow full scaling */
+  box-sizing: border-box;
+  max-height: 320px;
+
+}
+
+
+/* When dragging */
+.group-card:active {
+  cursor: grabbing;
+  opacity: 0.85;
+}
+
+/* Header styling */
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.focus-btn {
+  padding: 4px 10px;
+  background-color: gold;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Editable group title with emoji */
+.group-title {
+  flex: 1;
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+/* Collapse button */
+.collapse-btn {
+  background-color: #444;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Grid container for draggable groups */
+#tabList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+#analyticsPanel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1f1f1f;
+  border: 2px solid #444;
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 1000;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.stat-card {
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007acc;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+.insights {
+  background: #2d2d2d;
+  padding: 10px;
+  border-radius: 6px;
+  border-left: 3px solid #007acc;
+}
+
+.insights p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+#cleanupBtn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+#cleanupBtn:hover {
+  background-color: #ff5252;
+}
+
+
